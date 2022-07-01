@@ -5,13 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/site.webmanifest">
-    <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>Termo</title>
 </head>
@@ -26,15 +21,15 @@
     <div class="content">
         <div class="container">
             <div class="palavra paalavra">
-                <div class="campo campo1"><input class="palavraInput" onkeyup="nextKey('campo2', 'campo1')" id="campo1"
+                <div class="campo campo1"><input class="palavraInput" onkeyup="nextKey('campo2', 'campo1')" onkeypress="tapKey('campo1')" id="campo1"
                         maxlength="1" type="text"></div>
-                <div class="campo campo2"><input class="palavraInput" onkeyup="nextKey('campo3', 'campo1')" id="campo2"
+                <div class="campo campo2"><input class="palavraInput" onkeyup="nextKey('campo3', 'campo1');" onkeypress="tapKey('campo2')" id="campo2"
                         maxlength="1" type="text"></div>
-                <div class="campo campo3"><input class="palavraInput" onkeyup="nextKey('campo4', 'campo2')" id="campo3"
+                <div class="campo campo3"><input class="palavraInput" onkeyup="nextKey('campo4', 'campo2');" onkeypress="tapKey('campo3')" id="campo3"
                         maxlength="1" type="text"></div>
-                <div class="campo campo4"><input class="palavraInput" onkeyup="nextKey('campo5', 'campo3')" id="campo4"
+                <div class="campo campo4"><input class="palavraInput" onkeyup="nextKey('campo5', 'campo3');" onkeypress="tapKey('campo4')" id="campo4"
                         maxlength="1" type="text"></div>
-                <div class="campo campo5"><input class="palavraInput" onkeyup="nextKey('campo5', 'campo4')" id="campo5"
+                <div class="campo campo5"><input class="palavraInput" onkeyup="nextKey('campo5', 'campo4');" onkeypress="tapKey('campo5')" id="campo5"
                         maxlength="1" type="text"></div>
             </div>
             <div class="palavra disabled">

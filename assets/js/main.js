@@ -1,7 +1,8 @@
 let campoAlert = document.querySelector('.alert')
-const numAleatorio = Math.floor(Math.random() * palavras.length)
-const palavraAleatoria = palavras[numAleatorio]
-console.log(palavraAleatoria)
+let numAleatorio = Math.floor(Math.random() * palavras.length)
+let palavraAleatoria = palavras[numAleatorio]
+let arrPalavraAleatoria = palavraAleatoria.split('')
+console.log(arrPalavraAleatoria)
 
 function nextKey(proxId, prevId) {
     campoAlert.classList.add('d-none')
@@ -19,9 +20,9 @@ function nextKey(proxId, prevId) {
 function pressEnter() {
     if (event.keyCode === 13) {
         let arrPalavraUser = []
-        let palavras = document.querySelectorAll('.palavraInput')
+        let letras = document.querySelectorAll('.palavraInput')
         let campoPalavra
-        palavras.forEach(palavra => {
+        letras.forEach(palavra => {
             arrPalavraUser.push(palavra.value)
             campoPalavra = palavra.parentNode.parentNode
         })
@@ -40,9 +41,17 @@ function pressEnter() {
 function verifyGame(userWord) {
     if (palavraAleatoria === userWord) {
         alert("Ganhou!")
+    } else if (!palavras.includes(userWord)) {
+        insertText(campoAlert, "essa palavra não existe!")
     } else {
-        alert("Perdeu")
+        insertText(campoAlert, "perdeu")
     }
+}
+
+function tapKey(id) {
+    let local = document.getElementById(id)
+    local.style.animation = ""
+    setTimeout(() => local.style.animation = "tap .2s")
 }
 
 function insertText(element, text) {
