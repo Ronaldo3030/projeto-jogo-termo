@@ -1,4 +1,7 @@
 let campoAlert = document.querySelector('.alert')
+const numAleatorio = Math.floor(Math.random() * palavras.length)
+const palavraAleatoria = palavras[numAleatorio]
+console.log(palavraAleatoria)
 
 function nextKey(proxId, prevId) {
     campoAlert.classList.add('d-none')
@@ -35,7 +38,7 @@ function pressEnter() {
 }
 
 function verifyGame(userWord) {
-    if (palavra === userWord) {
+    if (palavraAleatoria === userWord) {
         alert("Ganhou!")
     } else {
         alert("Perdeu")
