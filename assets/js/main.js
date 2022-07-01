@@ -1,4 +1,3 @@
-let palavra = "acima"
 let campoAlert = document.querySelector('.alert')
 
 function nextKey(proxId, prevId) {
