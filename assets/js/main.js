@@ -1,10 +1,9 @@
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
-// let palavraAleatoria = palavras[numAleatorio]
-let palavraAleatoria = 'sabia'
+let palavraAleatoria = palavras[numAleatorio]
 let arrPalavraAleatoria = palavraAleatoria.split('')
+let letras
 let contador = 1
-let letras = document.querySelectorAll('.palavraInput'+contador)
 console.log(arrPalavraAleatoria)
 
 function nextKey(proxId, prevId) {
@@ -21,7 +20,7 @@ function nextKey(proxId, prevId) {
 }
 
 function pressEnter() {
-    let letras = document.querySelectorAll('.palavraInput'+contador)
+    letras = document.querySelectorAll('.palavraInput'+contador)
     if (event.keyCode === 13) {
         let arrPalavraUser = []
         let campoPalavra
@@ -43,10 +42,14 @@ function pressEnter() {
 
 function verifyGame(userWord) {
     if (palavraAleatoria === userWord) {
-        alert("Ganhou!")
+        // GANHOU
+        verifyWordUser(userWord)
+        alert('ganhou')
     } else if (!palavras.includes(userWord)) {
+        // PALAVRA NAO EXISTE
         insertText(campoAlert, "essa palavra não existe!")
     } else {
+        // ACERTOU ALGUMAS LETRAS
         verifyWordUser(userWord)
         nextWord()
     }
@@ -67,14 +70,17 @@ function nextWord() {
     contador++
     letras.forEach((campoLetra, index) => {
         campoLetra.setAttribute("disabled", "disabled")
-        campoLetra.parentNode.classList.remove('campo'+(index + 1))
+        campoLetra.parentElement.classList.remove('campo'+(index + 1))
     })
     let containerCampoPalavra = document.getElementById('palavra' + contador)
     containerCampoPalavra.classList.remove('disabled')
 
     let palavraInput = document.querySelectorAll('.palavraInput' + contador)
+    let conta = 1
     for (let item of palavraInput) {
         item.removeAttribute("disabled")
+        item.parentElement.classList.add('campo'+conta)
+        conta++
     }
 }
 
