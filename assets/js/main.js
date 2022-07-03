@@ -1,7 +1,6 @@
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
-// let palavraAleatoria = palavras[numAleatorio]
-let palavraAleatoria = "ideia"
+let palavraAleatoria = palavras[numAleatorio]
 let arrPalavraAleatoria = palavraAleatoria.split('')
 console.log(arrPalavraAleatoria)
 
@@ -68,15 +67,12 @@ function nextWord(){
 function verifyWordUser(word){
     arrWord = word.split('')
     arrWord.forEach((letraWord, index) => {
-        // console.log(letraWord)
-        console.log(letraWord)
         if(arrPalavraAleatoria.includes(letraWord)){
             document.getElementById('campo'+(index+1)).classList.add('existe')
         }
     })
 
     arrPalavraAleatoria.forEach((letraPalavraAleatoria, index) => {
-        console.log("Palavra: "+ letraPalavraAleatoria)
         if(letraPalavraAleatoria == arrWord[index]){
             document.getElementById('campo'+(index+1)).classList.add('certo')
         }else{
