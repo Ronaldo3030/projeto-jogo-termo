@@ -77,6 +77,7 @@ body{
     text-align: center;
     color: #fff;
     text-transform: uppercase;
+    position: relative;
 }
 
 .alert{
@@ -85,6 +86,10 @@ body{
     text-transform: none;
     font-weight: bold;
     border-radius: 7px;
+    position: absolute;
+    top: 50px;
+    left: -98px;
+    width: 250px;
 }
 
 .d-none{
