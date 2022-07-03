@@ -96,15 +96,15 @@ body{
     display: none;
 }
 
-.errada{
+.errada > input{
     background-color: #312A2C !important;
     border: 4px solid #312A2C !important;
 }
-.existe{
+.existe > input{
     background-color: #D3AD69 !important;
     border: 4px solid #D3AD69 !important;
 }
-.certo{
+.certo > input{
     background-color: #3AA394 !important;
     border: 4px solid #3AA394 !important;
 }

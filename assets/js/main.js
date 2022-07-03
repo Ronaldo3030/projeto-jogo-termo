@@ -4,7 +4,7 @@ let numAleatorio = Math.floor(Math.random() * palavras.length)
 let palavraAleatoria = 'sabia'
 let arrPalavraAleatoria = palavraAleatoria.split('')
 let contador = 1
-let letras = document.querySelectorAll('.palavraInput')
+let letras = document.querySelectorAll('.palavraInput'+contador)
 console.log(arrPalavraAleatoria)
 
 function nextKey(proxId, prevId) {
@@ -21,6 +21,7 @@ function nextKey(proxId, prevId) {
 }
 
 function pressEnter() {
+    let letras = document.querySelectorAll('.palavraInput'+contador)
     if (event.keyCode === 13) {
         let arrPalavraUser = []
         let campoPalavra
@@ -62,33 +63,34 @@ function insertText(element, text) {
     element.innerHTML = text
 }
 
-function nextWord(){
+function nextWord() {
     contador++
-    letras.forEach(campoLetra => {
+    letras.forEach((campoLetra, index) => {
         campoLetra.setAttribute("disabled", "disabled")
+        campoLetra.parentNode.classList.remove('campo'+(index + 1))
     })
-    let containerCampoPalavra = document.getElementById('palavra'+contador)
+    let containerCampoPalavra = document.getElementById('palavra' + contador)
     containerCampoPalavra.classList.remove('disabled')
 
-    let palavraInput = document.querySelectorAll('.palavraInput'+contador)
-    for(let item of palavraInput){
+    let palavraInput = document.querySelectorAll('.palavraInput' + contador)
+    for (let item of palavraInput) {
         item.removeAttribute("disabled")
     }
 }
 
-function verifyWordUser(word){
+function verifyWordUser(word) {
     arrWord = word.split('')
     arrWord.forEach((letraWord, index) => {
-        if(arrPalavraAleatoria.includes(letraWord)){
-            document.getElementById('campo'+(index+1)).classList.add('existe')
+        if (arrPalavraAleatoria.includes(letraWord)) {
+            document.querySelector('.campo' + (index + 1)).classList.add('existe')
         }
     })
 
     arrPalavraAleatoria.forEach((letraPalavraAleatoria, index) => {
-        if(letraPalavraAleatoria == arrWord[index]){
-            document.getElementById('campo'+(index+1)).classList.add('certo')
-        }else{
-            document.getElementById('campo'+(index+1)).classList.add('errada')
+        if (letraPalavraAleatoria == arrWord[index]) {
+            document.querySelector('.campo' + (index + 1)).classList.add('certo')
+        } else {
+            document.querySelector('.campo' + (index + 1)).classList.add('errada')
         }
     })
 }
