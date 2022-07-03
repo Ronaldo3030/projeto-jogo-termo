@@ -1,6 +1,7 @@
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
-let palavraAleatoria = palavras[numAleatorio]
+// let palavraAleatoria = palavras[numAleatorio]
+let palavraAleatoria = "ideia"
 let arrPalavraAleatoria = palavraAleatoria.split('')
 console.log(arrPalavraAleatoria)
 
@@ -44,7 +45,8 @@ function verifyGame(userWord) {
     } else if (!palavras.includes(userWord)) {
         insertText(campoAlert, "essa palavra não existe!")
     } else {
-        insertText(campoAlert, "perdeu")
+        verifyWordUser(userWord)
+        nextWord()
     }
 }
 
@@ -57,4 +59,28 @@ function tapKey(id) {
 function insertText(element, text) {
     element.classList.remove('d-none')
     element.innerHTML = text
+}
+
+function nextWord(){
+
+}
+
+function verifyWordUser(word){
+    arrWord = word.split('')
+    arrWord.forEach((letraWord, index) => {
+        // console.log(letraWord)
+        console.log(letraWord)
+        if(arrPalavraAleatoria.includes(letraWord)){
+            document.getElementById('campo'+(index+1)).classList.add('existe')
+        }
+    })
+
+    arrPalavraAleatoria.forEach((letraPalavraAleatoria, index) => {
+        console.log("Palavra: "+ letraPalavraAleatoria)
+        if(letraPalavraAleatoria == arrWord[index]){
+            document.getElementById('campo'+(index+1)).classList.add('certo')
+        }else{
+            document.getElementById('campo'+(index+1)).classList.add('errada')
+        }
+    })
 }

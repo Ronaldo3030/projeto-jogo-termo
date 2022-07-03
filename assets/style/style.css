@@ -96,6 +96,22 @@ body{
     display: none;
 }
 
+.errada{
+    background-color: #312A2C !important;
+    border: 4px solid #312A2C !important;
+}
+.existe{
+    background-color: #D3AD69 !important;
+    border: 4px solid #D3AD69 !important;
+}
+.certo{
+    background-color: #3AA394 !important;
+    border: 4px solid #3AA394 !important;
+}
+
+
+
+
 @keyframes wrong {
     0%{
         transform: translateX(20px);
