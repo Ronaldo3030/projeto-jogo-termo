@@ -1,7 +1,10 @@
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
-let palavraAleatoria = palavras[numAleatorio]
+// let palavraAleatoria = palavras[numAleatorio]
+let palavraAleatoria = 'sabia'
 let arrPalavraAleatoria = palavraAleatoria.split('')
+let contador = 1
+let letras = document.querySelectorAll('.palavraInput')
 console.log(arrPalavraAleatoria)
 
 function nextKey(proxId, prevId) {
@@ -20,7 +23,6 @@ function nextKey(proxId, prevId) {
 function pressEnter() {
     if (event.keyCode === 13) {
         let arrPalavraUser = []
-        let letras = document.querySelectorAll('.palavraInput')
         let campoPalavra
         letras.forEach(palavra => {
             arrPalavraUser.push(palavra.value)
@@ -61,7 +63,17 @@ function insertText(element, text) {
 }
 
 function nextWord(){
+    contador++
+    letras.forEach(campoLetra => {
+        campoLetra.setAttribute("disabled", "disabled")
+    })
+    let containerCampoPalavra = document.getElementById('palavra'+contador)
+    containerCampoPalavra.classList.remove('disabled')
 
+    let palavraInput = document.querySelectorAll('.palavraInput'+contador)
+    for(let item of palavraInput){
+        item.removeAttribute("disabled")
+    }
 }
 
 function verifyWordUser(word){

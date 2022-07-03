@@ -20,7 +20,7 @@
     </header>
     <div class="content">
         <div class="container">
-            <div class="palavra paalavra">
+            <div class="palavra" id="palavra1">
                 <div class="campo campo1"><input class="palavraInput" onkeyup="nextKey('campo2', 'campo1')" onkeypress="tapKey('campo1')" id="campo1"
                         maxlength="1" type="text"></div>
                 <div class="campo campo2"><input class="palavraInput" onkeyup="nextKey('campo3', 'campo1');" onkeypress="tapKey('campo2')" id="campo2"
@@ -32,52 +32,52 @@
                 <div class="campo campo5"><input class="palavraInput" onkeyup="nextKey('campo5', 'campo4');" onkeypress="tapKey('campo5')" id="campo5"
                         maxlength="1" type="text"></div>
             </div>
-            <div class="palavra disabled">
-                <div class="campo campo1"><input onkeyup="nextKey('campo2')" id="campo1" maxlength="1" type="text">
+            <div class="palavra disabled" id="palavra2">
+                <div class="campo campo1"><input class="palavraInput2" disabled onkeyup="nextKey('campo7', 'campo6')" onkeypress="tapKey('campo6')" id="campo6" maxlength="1" type="text">
                 </div>
-                <div class="campo campo2"><input onkeyup="nextKey('campo3', 'campo1')" id="campo2" maxlength="1"
+                <div class="campo campo2"><input class="palavraInput2" disabled onkeyup="nextKey('campo8', 'campo6')" onkeypress="tapKey('campo7')" id="campo7" maxlength="1"
                         type="text"></div>
-                <div class="campo campo3"><input onkeyup="nextKey('campo4', 'campo2')" id="campo3" maxlength="1"
+                <div class="campo campo3"><input class="palavraInput2" disabled onkeyup="nextKey('campo9', 'campo7')" onkeypress="tapKey('campo8')" id="campo8" maxlength="1"
                         type="text"></div>
-                <div class="campo campo4"><input onkeyup="nextKey('campo5', 'campo3')" id="campo4" maxlength="1"
+                <div class="campo campo4"><input class="palavraInput2" disabled onkeyup="nextKey('campo10', 'campo8')" onkeypress="tapKey('campo9')" id="campo9" maxlength="1"
                         type="text"></div>
-                <div class="campo campo5"><input onkeyup="nextKey('campo6', 'campo4')" id="campo5" maxlength="1"
+                <div class="campo campo5"><input class="palavraInput2" disabled onkeyup="nextKey('campo10', 'campo9')" onkeypress="tapKey('campo10')" id="campo10" maxlength="1"
                         type="text"></div>
             </div>
-            <div class="palavra disabled">
-                <div class="campo campo1"><input onkeyup="nextKey('campo2')" id="campo1" maxlength="1" type="text">
+            <div class="palavra disabled" id="palavra3">
+                <div class="campo campo1"><input disabled onkeyup="nextKey('campo2')" id="campo1" maxlength="1" type="text">
                 </div>
-                <div class="campo campo2"><input onkeyup="nextKey('campo3', 'campo1')" id="campo2" maxlength="1"
+                <div class="campo campo2"><input disabled onkeyup="nextKey('campo3', 'campo1')" id="campo2" maxlength="1"
                         type="text"></div>
-                <div class="campo campo3"><input onkeyup="nextKey('campo4', 'campo2')" id="campo3" maxlength="1"
+                <div class="campo campo3"><input disabled onkeyup="nextKey('campo4', 'campo2')" id="campo3" maxlength="1"
                         type="text"></div>
-                <div class="campo campo4"><input onkeyup="nextKey('campo5', 'campo3')" id="campo4" maxlength="1"
+                <div class="campo campo4"><input disabled onkeyup="nextKey('campo5', 'campo3')" id="campo4" maxlength="1"
                         type="text"></div>
-                <div class="campo campo5"><input onkeyup="nextKey('campo6', 'campo4')" id="campo5" maxlength="1"
+                <div class="campo campo5"><input disabled onkeyup="nextKey('campo6', 'campo4')" id="campo5" maxlength="1"
                         type="text"></div>
             </div>
-            <div class="palavra disabled">
-                <div class="campo campo1"><input onkeyup="nextKey('campo2')" id="campo1" maxlength="1" type="text">
+            <div class="palavra disabled" id="palavra4">
+                <div class="campo campo1"><input disabled onkeyup="nextKey('campo2')" id="campo1" maxlength="1" type="text">
                 </div>
-                <div class="campo campo2"><input onkeyup="nextKey('campo3', 'campo1')" id="campo2" maxlength="1"
+                <div class="campo campo2"><input disabled onkeyup="nextKey('campo3', 'campo1')" id="campo2" maxlength="1"
                         type="text"></div>
-                <div class="campo campo3"><input onkeyup="nextKey('campo4', 'campo2')" id="campo3" maxlength="1"
+                <div class="campo campo3"><input disabled onkeyup="nextKey('campo4', 'campo2')" id="campo3" maxlength="1"
                         type="text"></div>
-                <div class="campo campo4"><input onkeyup="nextKey('campo5', 'campo3')" id="campo4" maxlength="1"
+                <div class="campo campo4"><input disabled onkeyup="nextKey('campo5', 'campo3')" id="campo4" maxlength="1"
                         type="text"></div>
-                <div class="campo campo5"><input onkeyup="nextKey('campo6', 'campo4')" id="campo5" maxlength="1"
+                <div class="campo campo5"><input disabled onkeyup="nextKey('campo6', 'campo4')" id="campo5" maxlength="1"
                         type="text"></div>
             </div>
-            <div class="palavra disabled">
-                <div class="campo campo1"><input onkeyup="nextKey('campo2')" id="campo1" maxlength="1" type="text">
+            <div class="palavra disabled" id="palavra5">
+                <div class="campo campo1"><input disabled onkeyup="nextKey('campo2')" id="campo1" maxlength="1" type="text">
                 </div>
-                <div class="campo campo2"><input onkeyup="nextKey('campo3', 'campo1')" id="campo2" maxlength="1"
+                <div class="campo campo2"><input disabled onkeyup="nextKey('campo3', 'campo1')" id="campo2" maxlength="1"
                         type="text"></div>
-                <div class="campo campo3"><input onkeyup="nextKey('campo4', 'campo2')" id="campo3" maxlength="1"
+                <div class="campo campo3"><input disabled onkeyup="nextKey('campo4', 'campo2')" id="campo3" maxlength="1"
                         type="text"></div>
-                <div class="campo campo4"><input onkeyup="nextKey('campo5', 'campo3')" id="campo4" maxlength="1"
+                <div class="campo campo4"><input disabled onkeyup="nextKey('campo5', 'campo3')" id="campo4" maxlength="1"
                         type="text"></div>
-                <div class="campo campo5"><input onkeyup="nextKey('campo6', 'campo4')" id="campo5" maxlength="1"
+                <div class="campo campo5"><input disabled onkeyup="nextKey('campo6', 'campo4')" id="campo5" maxlength="1"
                         type="text"></div>
             </div>
         </div>
