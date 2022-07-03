@@ -44,7 +44,6 @@ function verifyGame(userWord) {
     if (palavraAleatoria === userWord) {
         // GANHOU
         verifyWordUser(userWord)
-        alert('ganhou')
     } else if (!palavras.includes(userWord)) {
         // PALAVRA NAO EXISTE
         insertText(campoAlert, "essa palavra não existe!")
@@ -74,7 +73,6 @@ function nextWord() {
     })
     let containerCampoPalavra = document.getElementById('palavra' + contador)
     containerCampoPalavra.classList.remove('disabled')
-
     let palavraInput = document.querySelectorAll('.palavraInput' + contador)
     let conta = 1
     for (let item of palavraInput) {
@@ -82,6 +80,7 @@ function nextWord() {
         item.parentElement.classList.add('campo'+conta)
         conta++
     }
+    palavraInput[0].focus()
 }
 
 function verifyWordUser(word) {
