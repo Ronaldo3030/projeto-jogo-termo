@@ -106,6 +106,18 @@ header{
 .d-none{
     display: none;
 }
+.content-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+.btn{
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
 
 .errada > input{
     background-color: #312A2C !important;
