@@ -8,6 +8,9 @@ console.log(arrPalavraAleatoria)
 
 function nextKey(proxId, prevId) {
     campoAlert.classList.add('d-none')
+    if (event.keyCode === 219 || event.keyCode === 222 || event.keyCode === 16) {
+        return
+    }
     if (event.keyCode === 8) {
         document.getElementById(prevId).focus()
         return
