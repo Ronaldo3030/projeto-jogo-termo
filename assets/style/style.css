@@ -47,6 +47,7 @@ body {
     -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     transition: transform .5s ease-in-out, color .5s ease-in-out;
+    cursor: pointer;
 }
 
 .button>i {
@@ -55,7 +56,7 @@ body {
 
 .button:hover {
     color: #3AA394;
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 .palavra {
@@ -146,7 +147,7 @@ header {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .content-header {
@@ -177,8 +178,43 @@ header {
     border: 4px solid #3AA394 !important;
 }
 
+.background-modal{
+    background-color: rgba(0, 0, 0, 0.815);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: showBackgroundModal .5s ease-in-out;
+}
 
-
+.modal{
+    width: 75%;
+    max-height: 600px;
+    background-color: #312B2D;
+    border-radius: 7px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    color: #BBBBBB;
+    position: relative;
+    overflow: auto;
+    animation: showModal 1s ease-in-out;
+}
+.close{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container-modal{
+    padding: 30px 20px 10px 20px;
+    font-size: 25px;
+}
 
 @keyframes wrong {
     0% {
@@ -213,5 +249,46 @@ header {
 
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes showBackgroundModal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes exitBackgroundModal {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes showModal {
+    0% {
+        transform: translatey(-220px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+@keyframes exitModal {
+    0% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translatey(-220px);
+        opacity: 0;
     }
 }

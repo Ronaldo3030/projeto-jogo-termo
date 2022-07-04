@@ -15,12 +15,29 @@
     <div class="content">
         <div class="menu">
             <a class="button" href="play.html"><i class="fas fa-play"></i>Jogar</a>
+            <a class="button" id="btnComoJogar"><i class="fas fa-question-circle"></i>Como jogar</a>
             <a class="button" href="sobre.html"><i class="fas fa-info-circle"></i>Sobre</a>
         </div>
     </div>
 
+    <div class="background-modal" id="background-modal">
+        <div class="modal" id="modal">
+            <div class="close">&#10006;</div>
+            <div class="container-modal">
+                <p>Descubra a palavra certa em 6 tentativas. Depois de cada tentativa, as peças mostram o quão perto você está da solução.</p>
+                <img src="assets/images/turma.png" alt="imagem demonstração de turma">
+                <p>A letra T faz parte da palavra e está na posição correta.</p>
+                <img src="assets/images/viola.png" alt="imagem demonstração de viola">
+                <p>A letra O faz parte da palavra mas em outra posição.</p>
+                <img src="assets/images/pulga.png" alt="imagem demonstração de pulga">
+                <p>A letra G não faz parte da palavra.</p>
+                <p>As palavras podem possuir letras repetidas.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="https://kit.fontawesome.com/ac5f400d27.js" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 
 </html>
