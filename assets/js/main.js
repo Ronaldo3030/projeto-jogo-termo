@@ -44,6 +44,7 @@ function verifyGame(userWord) {
     if (palavraAleatoria === userWord) {
         // GANHOU
         verifyWordUser(userWord)
+        insertText(campoAlert, "Genial!")
     } else if (!palavras.includes(userWord)) {
         // PALAVRA NAO EXISTE
         insertText(campoAlert, "essa palavra não existe!")
