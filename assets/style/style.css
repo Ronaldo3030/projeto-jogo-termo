@@ -129,7 +129,8 @@ header {
     font-size: 40px;
     margin: 15px;
 }
-.center{
+
+.center {
     text-align: center;
     margin-top: 15px;
 }
@@ -178,7 +179,7 @@ header {
     border: 4px solid #3AA394 !important;
 }
 
-.background-modal{
+.background-modal {
     background-color: rgba(0, 0, 0, 0.815);
     width: 100%;
     height: 100vh;
@@ -191,7 +192,7 @@ header {
     animation: showBackgroundModal .5s ease-in-out;
 }
 
-.modal{
+.modal {
     width: 75%;
     max-height: 600px;
     background-color: #312B2D;
@@ -204,16 +205,43 @@ header {
     overflow: auto;
     animation: showModal 1s ease-in-out;
 }
-.close{
+
+.close {
     position: absolute;
     top: 5px;
     right: 15px;
     font-size: 20px;
     cursor: pointer;
 }
-.container-modal{
+
+.container-modal {
     padding: 30px 20px 10px 20px;
     font-size: 25px;
+}
+.container-modal h2{
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.icon-again {
+    width: auto;
+    height: 25px;
+    color: white;
+    margin: 20px 0 10px;
+}
+
+.icon-again:hover {
+    animation: rotate 1s;
+}
+
+.resposta{
+    color: #3AA394 !important;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes wrong {
@@ -261,6 +289,7 @@ header {
         opacity: 1;
     }
 }
+
 @keyframes exitBackgroundModal {
     0% {
         opacity: 1;
@@ -270,6 +299,7 @@ header {
         opacity: 0;
     }
 }
+
 @keyframes showModal {
     0% {
         transform: translatey(-220px);
@@ -281,6 +311,7 @@ header {
         opacity: 1;
     }
 }
+
 @keyframes exitModal {
     0% {
         transform: translatey(0);

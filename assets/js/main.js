@@ -1,3 +1,4 @@
+let resposta = document.getElementById('resposta')
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
 let palavraAleatoria = palavras[numAleatorio]
@@ -76,15 +77,21 @@ function nextWord() {
         campoLetra.parentElement.classList.remove('campo'+(index + 1))
     })
     let containerCampoPalavra = document.getElementById('palavra' + contador)
-    containerCampoPalavra.classList.remove('disabled')
-    let palavraInput = document.querySelectorAll('.palavraInput' + contador)
-    let conta = 1
-    for (let item of palavraInput) {
-        item.removeAttribute("disabled")
-        item.parentElement.classList.add('campo'+conta)
-        conta++
+    if(containerCampoPalavra){
+        containerCampoPalavra.classList.remove('disabled')
+        let palavraInput = document.querySelectorAll('.palavraInput' + contador)
+        let conta = 1
+        for (let item of palavraInput) {
+            item.removeAttribute("disabled")
+            item.parentElement.classList.add('campo'+conta)
+            conta++
+        }
+        palavraInput[0].focus()
+    }else{
+        // PERDEU
+        backgroundModal.classList.remove('d-none')
+        resposta.innerText = palavraAleatoria
     }
-    palavraInput[0].focus()
 }
 
 function verifyWordUser(word) {
