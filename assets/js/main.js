@@ -1,4 +1,5 @@
 let resposta = document.getElementById('resposta')
+let resposta2 = document.getElementById('resposta2')
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
 let palavraAleatoria = palavras[numAleatorio]
@@ -49,6 +50,8 @@ function verifyGame(userWord) {
         // GANHOU
         verifyWordUser(userWord)
         insertText(campoAlert, "Genial!")
+        backgroundModal2.classList.remove('d-none')
+        resposta2.innerText = contador
     } else if (!palavras.includes(userWord)) {
         // PALAVRA NAO EXISTE
         insertText(campoAlert, "essa palavra não existe!")
