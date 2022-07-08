@@ -1,6 +1,7 @@
 let url = window.location.href;
 
 let backgroundModal = document.getElementById('background-modal')
+let backgroundModal2 = document.getElementById('background-modal2')
 let modal = document.getElementById('modal')
 let btnComoJogar = document.getElementById('btnComoJogar')
 backgroundModal.addEventListener('click', (e) => {
