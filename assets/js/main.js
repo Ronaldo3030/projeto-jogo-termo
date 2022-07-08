@@ -2,7 +2,7 @@ let resposta = document.getElementById('resposta')
 let resposta2 = document.getElementById('resposta2')
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
-let palavraAleatoria = palavras[numAleatorio]
+let palavraAleatoria = (palavras[numAleatorio]).toLowerCase()
 let arrPalavraAleatoria = palavraAleatoria.split('')
 let letras
 let contador = 1
