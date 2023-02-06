@@ -2,7 +2,7 @@ let resposta = document.getElementById('resposta')
 let resposta2 = document.getElementById('resposta2')
 let campoAlert = document.querySelector('.alert')
 let numAleatorio = Math.floor(Math.random() * palavras.length)
-let palavraAleatoria = (palavras[numAleatorio]).toLowerCase()
+let palavraAleatoria = (treatWord(palavras[numAleatorio]).toLowerCase()); 
 let arrPalavraAleatoria = palavraAleatoria.split('')
 let letras
 let contador = 1
@@ -113,3 +113,9 @@ function verifyWordUser(word) {
         }
     })
 }
+
+function treatWord(word){
+    let newWord = word.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    newWord = newWord.replace(/ g/, "-");
+    return newWord;
+  }
